@@ -18,12 +18,11 @@ header .logo {
     height: 40px;
     right: 30px;
     display: inline-block;
-    float: right;
     top: 50%;
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
 
 }
-.available {
+#api_status.available {
     background-color: #ff545f;
 }

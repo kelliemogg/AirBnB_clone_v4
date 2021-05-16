@@ -16,5 +16,12 @@ $(document).ready(function () {
       $('#checked_list').text('&nbsp;');
     } else { amenString = amenList.join(', ');
         $('#checked_list').text(amenString); }
+
+        // this is checking the status of our api
+        $.get('http://0.0.0.0:5001/api/v1/status/', function (apiOK) {
+      if (apiOK.status === "OK") {
+        $('DIV#api_status').addClass('available');
+      } else { $('DIV#api_status').removeClass('available'); }
+      });
   });
 });
