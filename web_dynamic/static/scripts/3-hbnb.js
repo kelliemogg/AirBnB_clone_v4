@@ -6,6 +6,26 @@ $(document).ready(function () {
     } else {
       $('#api_status').removeClass('available'); }
 });
+
+// this is our ajax function for live updates
+$(function () {
+
+  $.ajax({
+    type: 'POST',
+    url: 'http://0.0.0.0:5001/api/v1/places_search/',
+    contentType: 'application/json',
+    data: '{}',
+    success: function(data) {
+      $.each(data, function () {
+// here we need to add what was in the html block
+// that we deleted but in ajax form - idk how
+        $data.append(data)
+      })
+    }
+  })
+})
+
+// this displays only selected amenities
   let amenList = [];
   let value = '';
   let amenString = "";
