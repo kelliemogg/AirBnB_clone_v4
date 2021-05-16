@@ -16,10 +16,11 @@ $(function () {
     contentType: 'application/json',
     data: '{}',
     success: function(data) {
-      $.each(data, function () {
-// here we need to add what was in the html block
-// that we deleted but in ajax form - idk how
-        $data.append(data)
+      for(let i = 0; i < data.length; i++) {
+// loops through all places returned
+//this line grabs a place and then functions like it normally would
+        const place = data[i];
+        //ajax html format goes here
       })
     }
   })
