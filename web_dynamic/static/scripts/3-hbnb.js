@@ -33,7 +33,7 @@ $(document).ready(function () {
               '<div class="description">',
           ' + data[i].description,',
               '</div>'].join('\n');
-        $('sections.places').append(place);
+      $('section.places').append(place);
     };
   }
 });
