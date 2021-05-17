@@ -53,7 +53,7 @@ $(document).ready(function () {
         amenList.splice(index, 1); }
     }
     if (amenList.length === 0) {
-      $('#checked_list').text('&nbsp;');
+      $('#checked_list').html('&nbsp;');
     } else { amenString = amenList.join(', ');
         $('#checked_list').text(amenString); }
   });
