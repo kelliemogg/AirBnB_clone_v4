@@ -18,9 +18,7 @@ $(document).ready(function () {
       for(let i = 0; i < data.length; i++) {
 // loops through all places returned
 //this line grabs a place and then functions like it normally would
-        const place = data[i];
-              $.each(data, function () {
-          place = ['<div class="title_box">',
+        const place = ['<div class="title_box">',
           '<h2>' + data[i].name + '</h2>',
           '<div class="price_by_night">' + data[i].price_by_night + '</div>',
           '</div>',
@@ -36,10 +34,8 @@ $(document).ready(function () {
           ' + data[i].description,',
               '</div>'].join('\n');
         $('sections.places').append(place);
-        i++;
-    });
+    };
   }
-}
 });
 
 // this displays only selected amenities
